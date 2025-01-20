@@ -55,6 +55,10 @@ export default function ProductsListing() {
         setPage((prevPage) => prevPage + 1);
     };
 
+    const handleViewDetails = (productId) => {
+        window.open(`http://localhost:8080/product/${productId}`, "_blank");
+    };
+
     return (
         <>
             {/* E-commerce Landing Page */}
@@ -125,7 +129,9 @@ export default function ProductsListing() {
                                             {product.title}
                                         </h3>
                                         <p className="text-gray-700 font-bold text-xl mb-4">${product.price}</p>
-                                        <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+                                        <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
+                                         onClick={() => handleViewDetails(product.id)}
+                                        >
                                             Add to Cart
                                         </button>
                                     </div>

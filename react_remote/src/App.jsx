@@ -5,7 +5,7 @@ import "./index.scss";
 import ProductsListing from "./ProductsListing";
 
 const App = () => (
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
+  <div className="">
     <ProductsListing></ProductsListing>
   </div>
 );
